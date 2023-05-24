@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <TouchableOpacity style={styles.button}>
+       <Text style={styles.text}> Click Me </Text>
+         </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
@@ -17,4 +19,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  button:{
+    backgroundColor: 'black',
+    width: 150,
+    height: 50,
+    borderRadius: 15,
+    justifyContent: 'center',
+    alignSelf: 'center'
+    
+  },
+  text:{
+    color: '#f0f',
+    fontSize: 30,
+    justifyContent: 'center',
+    marginHorizontal: 10
+
+  }
 });
